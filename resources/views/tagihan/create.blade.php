@@ -49,6 +49,19 @@
                            required>
                 </div>
 
+                <div class="mb-4">
+                    <label class="block">
+                        Tagihan Air (Rp)
+                    </label>
+                    <input type="number"
+                           name="tagihan_air"
+                           class="w-full border rounded px-3 py-2"
+                           required>
+                    <small class="text-gray-500">
+                        Diisi manual oleh petugas
+                    </small>
+                </div>
+
                 <div class="flex justify-end space-x-2">
                     <a href="{{ route('tagihan.index') }}"
                        class="px-4 py-2 bg-gray-300 rounded">

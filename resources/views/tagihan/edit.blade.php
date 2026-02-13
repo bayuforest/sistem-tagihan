@@ -21,19 +21,41 @@
                 </div>
 
                 <div class="mb-4">
+                    <label class="block">Bulan Tagihan</label>
+                    <input type="text"
+                           class="w-full border rounded px-3 py-2 bg-gray-100"
+                           value="{{ \Carbon\Carbon::parse($tagihan->bulan_tagihan)->format('F Y') }}"
+                           disabled>
+                </div>
+
+                <div class="mb-4">
                     <label class="block">Meteran Awal</label>
-                    <input type="number" name="meteran_awal"
-                           value="{{ $tagihan->meteran_awal }}"
+                    <input type="number"
+                           name="meteran_awal"
+                           value="{{ old('meteran_awal', $tagihan->meteran_awal) }}"
                            class="w-full border rounded px-3 py-2"
                            required>
                 </div>
 
                 <div class="mb-4">
                     <label class="block">Meteran Akhir</label>
-                    <input type="number" name="meteran_akhir"
-                           value="{{ $tagihan->meteran_akhir }}"
+                    <input type="number"
+                           name="meteran_akhir"
+                           value="{{ old('meteran_akhir', $tagihan->meteran_akhir) }}"
                            class="w-full border rounded px-3 py-2"
                            required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block">Tagihan Air (Rp)</label>
+                    <input type="number"
+                           name="tagihan_air"
+                           value="{{ old('tagihan_air', $tagihan->tagihan_air) }}"
+                           class="w-full border rounded px-3 py-2"
+                           required>
+                    <small class="text-gray-500">
+                        Diisi sesuai perhitungan manual / mandiri
+                    </small>
                 </div>
 
                 <div class="flex justify-end space-x-2">

@@ -39,24 +39,17 @@ class TagihanController extends Controller
             'resident_id'   => 'required|exists:residents,id',
             'meteran_awal'  => 'required|integer|min:0',
             'meteran_akhir' => 'required|integer|gte:meteran_awal',
+            'tagihan_air'   => 'required|integer|min:0',
         ]);
 
-        /**
-         * HTML input type="month" mengirim: YYYY-MM
-         * PostgreSQL butuh YYYY-MM-DD
-         */
         $bulanTagihan = $validated['bulan_tagihan'] . '-01';
-
-        // hitung pemakaian air
-        $pemakaian   = $validated['meteran_akhir'] - $validated['meteran_awal'];
-        $tagihanAir  = $pemakaian * 3000; // contoh tarif air
 
         Tagihan::create([
             'bulan_tagihan' => $bulanTagihan,
             'resident_id'   => $validated['resident_id'],
             'meteran_awal'  => $validated['meteran_awal'],
             'meteran_akhir' => $validated['meteran_akhir'],
-            'tagihan_air'   => $tagihanAir,
+            'tagihan_air'   => $validated['tagihan_air'],
             'ipl'           => 160000,
             'abodement'     => 10000,
         ]);
@@ -65,6 +58,7 @@ class TagihanController extends Controller
             ->route('tagihan.index')
             ->with('success', 'Tagihan berhasil ditambahkan');
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -82,16 +76,10 @@ class TagihanController extends Controller
         $validated = $request->validate([
             'meteran_awal'  => 'required|integer|min:0',
             'meteran_akhir' => 'required|integer|gte:meteran_awal',
+            'tagihan_air'   => 'required|integer|min:0',
         ]);
 
-        $pemakaian  = $validated['meteran_akhir'] - $validated['meteran_awal'];
-        $tagihanAir = $pemakaian * 3000;
-
-        $tagihan->update([
-            'meteran_awal' => $validated['meteran_awal'],
-            'meteran_akhir'=> $validated['meteran_akhir'],
-            'tagihan_air'  => $tagihanAir,
-        ]);
+        $tagihan->update($validated);
 
         return redirect()
             ->route('tagihan.index')
