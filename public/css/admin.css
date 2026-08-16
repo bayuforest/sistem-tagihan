@@ -362,15 +362,16 @@ tbody tr:hover {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    color: white;
-    box-shadow: 0 4px 12px rgba(222, 147, 18, 0.2);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+    color: white !important;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08), inset 0 2px 4px rgba(255,255,255,0.25);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(222, 147, 18, 0.3);
+    background: linear-gradient(135deg, #f7ba50, var(--primary-light));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(222, 147, 18, 0.3), inset 0 2px 4px rgba(255,255,255,0.4);
 }
 
 /* Logout button styling */
@@ -434,11 +435,126 @@ tbody tr:hover {
     display: block;
 }
 .btn-secondary {
-    background-color: #f1f3f5;
-    color: var(--text-main);
+    background: linear-gradient(135deg, #ffffff, #f1f3f5);
+    color: var(--text-main) !important;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05), inset 0 2px 4px rgba(255,255,255,0.5);
 }
 .btn-secondary:hover {
-    background-color: #e2e6ea;
+    background: linear-gradient(135deg, #ffffff, #e9ecef);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08), inset 0 2px 4px rgba(255,255,255,0.7);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white !important;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08), inset 0 2px 4px rgba(255,255,255,0.25);
+}
+.btn-success:hover {
+    background: linear-gradient(135deg, #40d47e, #2ecc71);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3), inset 0 2px 4px rgba(255,255,255,0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ff6b6b, #e74c3c);
+    color: white !important;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08), inset 0 2px 4px rgba(255,255,255,0.25);
+}
+.btn-danger:hover {
+    background: linear-gradient(135deg, #ff8787, #ff6b6b);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3), inset 0 2px 4px rgba(255,255,255,0.4);
+}
+
+/* Glossy Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08), inset 0 2px 4px rgba(255,255,255,0.25);
+    font-family: 'Outfit', sans-serif;
+    color: white !important;
+}
+.btn-edit {
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+}
+.btn-edit:hover {
+    background: linear-gradient(135deg, #f7ba50, var(--primary-light));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(222, 147, 18, 0.3), inset 0 2px 4px rgba(255,255,255,0.4);
+}
+.btn-delete {
+    background: linear-gradient(135deg, #ff6b6b, #e74c3c);
+}
+.btn-delete:hover {
+    background: linear-gradient(135deg, #ff8787, #ff6b6b);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3), inset 0 2px 4px rgba(255,255,255,0.4);
+}
+.btn-info {
+    background: linear-gradient(135deg, #5dade2, #3498db);
+}
+.btn-info:hover {
+    background: linear-gradient(135deg, #85c1e9, #5dade2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3), inset 0 2px 4px rgba(255,255,255,0.4);
+}
+
+/* Mobile Menu Button & Overlay */
+.mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 8px;
+    margin-left: -8px;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+.mobile-menu-btn svg {
+    width: 24px;
+    height: 24px;
+}
+.mobile-menu-btn:hover {
+    background-color: var(--border-color);
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 95;
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.show {
+    display: block;
+    opacity: 1;
 }
 
 /* Responsive adjustments */
@@ -447,7 +563,20 @@ tbody tr:hover {
         transform: translateX(-100%);
         transition: var(--transition);
     }
+    
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
     .main-content {
         margin-left: 0;
+    }
+    
+    .topbar {
+        padding: 0 24px;
     }
 }

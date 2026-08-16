@@ -28,7 +28,7 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
             
-            $table->enum('status', ['Belum Lunas', 'Lunas'])->default('Belum Lunas');
+            $table->enum('status', ['Unpaid', 'Paid'])->default('Unpaid');
 
             // foreign key
             $table->foreign('resident_id')

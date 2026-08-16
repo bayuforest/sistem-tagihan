@@ -44,23 +44,22 @@
                             <td style="text-align: center; color: var(--text-muted);">{{ $t->meteran_awal }} - {{ $t->meteran_akhir }}</td>
                             <td style="text-align: right; font-weight: 600; color: var(--primary-dark);">{{ number_format($t->tagihan_air + $t->ipl + $t->abodement, 0, ',', '.') }}</td>
                             <td style="text-align: center;">
-                                @if($t->status === 'Lunas')
-                                    <span class="status-badge status-paid">Lunas</span>
+                                @if($t->status === 'Paid')
+                                    <span class="status-badge status-paid">Paid</span>
                                 @else
-                                    <span class="status-badge status-unpaid">Belum Lunas</span>
+                                    <span class="status-badge status-unpaid">Unpaid</span>
                                 @endif
                             </td>
                             <td style="text-align: center;">
-                                <a href="{{ route('tagihan.show', $t) }}" style="color: var(--primary-light); text-decoration: none; font-weight: 500; font-size: 0.9rem;">Lihat Detail</a>
+                                <a href="{{ route('tagihan.show', $t) }}" class="btn-action btn-info">Detail</a>
                             </td>
                             <td>
-                                <div style="display: flex; gap: 12px; align-items: center; justify-content: center;">
-                                    <a href="{{ route('tagihan.edit', $t) }}" style="color: var(--primary-color); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary-dark)'" onmouseout="this.style.color='var(--primary-color)'">Edit</a>
-
+                                <div class="action-buttons">
+                                    <a href="{{ route('tagihan.edit', $t) }}" class="btn-action btn-edit">Edit</a>
                                     <form action="{{ route('tagihan.destroy', $t) }}" method="POST" onsubmit="return confirm('Hapus tagihan ini?');" style="margin: 0;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" style="color: #e74c3c; background: none; border: none; font-weight: 500; font-size: 0.9rem; cursor: pointer; transition: var(--transition);" onmouseover="this.style.color='#c0392b'" onmouseout="this.style.color='#e74c3c'">Hapus</button>
+                                        <button type="submit" class="btn-action btn-delete">Hapus</button>
                                     </form>
                                 </div>
                             </td>

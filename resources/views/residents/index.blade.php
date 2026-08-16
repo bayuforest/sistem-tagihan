@@ -40,13 +40,12 @@
                             <td style="font-weight: 500;">{{ $resident->nama }}</td>
                             <td style="color: var(--text-muted);">{{ $resident->alamat }}</td>
                             <td>
-                                <div style="display: flex; gap: 16px; align-items: center;">
-                                    <a href="{{ route('residents.edit', $resident) }}" style="color: var(--primary-color); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary-dark)'" onmouseout="this.style.color='var(--primary-color)'">Edit</a>
-
+                                <div class="action-buttons">
+                                    <a href="{{ route('residents.edit', $resident) }}" class="btn-action btn-edit">Edit</a>
                                     <form action="{{ route('residents.destroy', $resident) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus data warga ini?');" style="margin: 0;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" style="color: #e74c3c; background: none; border: none; font-weight: 500; font-size: 0.9rem; cursor: pointer; transition: var(--transition);" onmouseover="this.style.color='#c0392b'" onmouseout="this.style.color='#e74c3c'">Hapus</button>
+                                        <button type="submit" class="btn-action btn-delete">Hapus</button>
                                     </form>
                                 </div>
                             </td>

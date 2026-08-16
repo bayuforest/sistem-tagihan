@@ -9,10 +9,10 @@
             </div>
             
             <div>
-                @if($tagihan->status === 'Lunas')
-                    <span class="status-badge status-paid" style="font-size: 0.9rem; padding: 8px 16px;">Lunas</span>
+                @if($tagihan->status === 'Paid')
+                    <span class="status-badge status-paid" style="font-size: 0.9rem; padding: 8px 16px;">Paid</span>
                 @else
-                    <span class="status-badge status-unpaid" style="font-size: 0.9rem; padding: 8px 16px;">Belum Lunas</span>
+                    <span class="status-badge status-unpaid" style="font-size: 0.9rem; padding: 8px 16px;">Unpaid</span>
                 @endif
             </div>
         </div>
@@ -75,20 +75,20 @@
         </div>
 
         <div style="margin-top: 40px; display: flex; justify-content: space-between;">
-            <a href="{{ route('tagihan.index') }}" class="btn btn-secondary">Kembali</a>
+            <a href="{{ route('tagihan.index') }}" class="btn btn-danger">Kembali</a>
             <div style="display: flex; gap: 12px;">
-                <a href="{{ route('tagihan.edit', $tagihan) }}" class="btn btn-primary" style="background-color: var(--text-main);">Edit Tagihan</a>
+                <a href="{{ route('tagihan.edit', $tagihan) }}" class="btn btn-success">Edit Tagihan</a>
                 
-                @if($tagihan->status === 'Belum Lunas')
+                @if($tagihan->status === 'Unpaid')
                     <form action="{{ route('tagihan.update', $tagihan) }}" method="POST" style="margin: 0;">
                         @csrf
                         @method('PUT')
                         <!-- Kita bisa menggunakan form update ini untuk mensimulasikan update status jika diperlukan -->
-                        <!-- Saat ini ini hanya contoh jika kita punya logic set lunas terpisah, tapi kalau tidak ada, mungkin edit saja sudah cukup -->
+                        <!-- Saat ini ini hanya contoh jika kita punya logic set Paid terpisah, tapi kalau tidak ada, mungkin edit saja sudah cukup -->
                         <input type="hidden" name="meteran_awal" value="{{ $tagihan->meteran_awal }}">
                         <input type="hidden" name="meteran_akhir" value="{{ $tagihan->meteran_akhir }}">
                         <input type="hidden" name="tagihan_air" value="{{ $tagihan->tagihan_air }}">
-                        <!-- <button type="submit" class="btn btn-primary">Tandai Lunas</button> -->
+                        <!-- <button type="submit" class="btn btn-primary">Tandai Paid</button> -->
                     </form>
                 @endif
             </div>

@@ -61,7 +61,7 @@
                     
                     @forelse ($recentTagihans as $tagihan)
                     <tr>
-                        <td>{{ $tagihan->bulan_tagihan }}</td>
+                        <td>{{ \Carbon\Carbon::parse($tagihan->bulan_tagihan)->format('F Y') }}</td>
                         <td>{{ $tagihan->resident->nama ?? '-' }}</td>
                         <td>{{ $tagihan->meteran_awal }} - {{ $tagihan->meteran_akhir }}</td>
                         <td>Rp {{ number_format($tagihan->tagihan_air + $tagihan->ipl + $tagihan->abodement, 0, ',', '.') }}</td>
