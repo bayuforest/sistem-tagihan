@@ -15,7 +15,13 @@ class Resident extends Model
     protected $fillable = [
         'alamat',
         'nama',
+        'user_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function tagihan()
     {

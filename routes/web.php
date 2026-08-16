@@ -3,11 +3,14 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResidentController;
 use App\Http\Controllers\TagihanController;
+use App\Http\Controllers\WargaController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Public Warga Routes
+Route::get('/', [WargaController::class, 'index'])->name('warga.dashboard');
+Route::get('/warga', [WargaController::class, 'index']); // Alias
+Route::post('/warga/cek', [WargaController::class, 'cekTagihan'])->name('warga.cek');
+Route::post('/warga/keluar', [WargaController::class, 'keluar'])->name('warga.keluar');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
