@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('alamat', 50);           // varchar(50), not null
             $table->string('nama', 50);             // varchar(50), not null
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

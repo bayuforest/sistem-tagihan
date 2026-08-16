@@ -1,75 +1,57 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800">
-            Edit Tagihan
-        </h2>
-    </x-slot>
+@extends('layouts.admin', ['header' => 'Edit Tagihan'])
 
-    <div class="py-6">
-        <div class="max-w-xl mx-auto bg-white p-6 shadow rounded">
-
-            <form action="{{ route('tagihan.update', $tagihan) }}" method="POST">
-                @csrf
-                @method('PUT')
-
-                <div class="mb-4">
-                    <label class="block">Resident</label>
-                    <input type="text"
-                           class="w-full border rounded px-3 py-2 bg-gray-100"
-                           value="{{ $tagihan->resident->nama }}"
-                           disabled>
-                </div>
-
-                <div class="mb-4">
-                    <label class="block">Bulan Tagihan</label>
-                    <input type="text"
-                           class="w-full border rounded px-3 py-2 bg-gray-100"
-                           value="{{ \Carbon\Carbon::parse($tagihan->bulan_tagihan)->format('F Y') }}"
-                           disabled>
-                </div>
-
-                <div class="mb-4">
-                    <label class="block">Meteran Awal</label>
-                    <input type="number"
-                           name="meteran_awal"
-                           value="{{ old('meteran_awal', $tagihan->meteran_awal) }}"
-                           class="w-full border rounded px-3 py-2"
-                           required>
-                </div>
-
-                <div class="mb-4">
-                    <label class="block">Meteran Akhir</label>
-                    <input type="number"
-                           name="meteran_akhir"
-                           value="{{ old('meteran_akhir', $tagihan->meteran_akhir) }}"
-                           class="w-full border rounded px-3 py-2"
-                           required>
-                </div>
-
-                <div class="mb-4">
-                    <label class="block">Tagihan Air (Rp)</label>
-                    <input type="number"
-                           name="tagihan_air"
-                           value="{{ old('tagihan_air', $tagihan->tagihan_air) }}"
-                           class="w-full border rounded px-3 py-2"
-                           required>
-                    <small class="text-gray-500">
-                        Diisi sesuai perhitungan manual / mandiri
-                    </small>
-                </div>
-
-                <div class="flex justify-end space-x-2">
-                    <a href="{{ route('tagihan.index') }}"
-                       class="px-4 py-2 bg-gray-300 rounded">
-                        Batal
-                    </a>
-                    <button class="px-4 py-2 bg-blue-600 text-white rounded">
-                        Update
-                    </button>
-                </div>
-
-            </form>
-
+@section('content')
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+        <div style="margin-bottom: 24px;">
+            <h2 style="font-size: 1.25rem; font-weight: 600;">Edit Data Tagihan</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Perbarui rincian pemakaian dan tagihan warga.</p>
         </div>
+
+        <form action="{{ route('tagihan.update', $tagihan) }}" method="POST">
+            @csrf
+            @method('PUT')
+
+            <div class="form-group">
+                <label class="form-label">Resident</label>
+                <input type="text" class="form-control" value="{{ $tagihan->resident->nama }}" disabled style="background-color: #f1f3f5; color: #828a96;">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Bulan Tagihan</label>
+                <input type="text" class="form-control" value="{{ \Carbon\Carbon::parse($tagihan->bulan_tagihan)->format('F Y') }}" disabled style="background-color: #f1f3f5; color: #828a96;">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                    <label class="form-label">Meteran Awal</label>
+                    <input type="number" name="meteran_awal" value="{{ old('meteran_awal', $tagihan->meteran_awal) }}" class="form-control" required>
+                    @error('meteran_awal')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Meteran Akhir</label>
+                    <input type="number" name="meteran_akhir" value="{{ old('meteran_akhir', $tagihan->meteran_akhir) }}" class="form-control" required>
+                    @error('meteran_akhir')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Tagihan Air (Rp)</label>
+                <input type="number" name="tagihan_air" value="{{ old('tagihan_air', $tagihan->tagihan_air) }}" class="form-control" required>
+                <span class="form-text">Diisi sesuai perhitungan manual / mandiri</span>
+                @error('tagihan_air')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 32px;">
+                <a href="{{ route('tagihan.index') }}" class="btn btn-secondary">Batal</a>
+                <button type="submit" class="btn btn-primary">Update Tagihan</button>
+            </div>
+        </form>
     </div>
-</x-app-layout>
+@endsection

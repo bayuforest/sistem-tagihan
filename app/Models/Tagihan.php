@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tagihan extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'bulan_tagihan',
@@ -17,6 +18,7 @@ class Tagihan extends Model
         'tagihan_air',
         'ipl',
         'abodement',
+        'status',
     ];
 
     protected $casts = [

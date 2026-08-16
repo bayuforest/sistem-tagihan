@@ -1,79 +1,70 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800">
-            Tambah Tagihan
-        </h2>
-    </x-slot>
+@extends('layouts.admin', ['header' => 'Tambah Tagihan'])
 
-    <div class="py-6">
-        <div class="max-w-xl mx-auto bg-white p-6 shadow rounded">
-
-            <form action="{{ route('tagihan.store') }}" method="POST">
-                @csrf
-
-                <div class="mb-4">
-                    <label class="block">Bulan Tagihan</label>
-                    <input type="month" name="bulan_tagihan"
-                           class="w-full border rounded px-3 py-2"
-                           required>
-                    <small class="text-gray-500">
-                        Sistem otomatis simpan sebagai tanggal 1
-                    </small>
-                </div>
-
-                <div class="mb-4">
-                    <label class="block">Resident</label>
-                    <select name="resident_id"
-                            class="w-full border rounded px-3 py-2"
-                            required>
-                        <option value="">-- Pilih Resident --</option>
-                        @foreach($residents as $resident)
-                            <option value="{{ $resident->id }}">
-                                {{ $resident->nama }} - {{ $resident->alamat }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="mb-4">
-                    <label class="block">Meteran Awal</label>
-                    <input type="number" name="meteran_awal"
-                           class="w-full border rounded px-3 py-2"
-                           required>
-                </div>
-
-                <div class="mb-4">
-                    <label class="block">Meteran Akhir</label>
-                    <input type="number" name="meteran_akhir"
-                           class="w-full border rounded px-3 py-2"
-                           required>
-                </div>
-
-                <div class="mb-4">
-                    <label class="block">
-                        Tagihan Air (Rp)
-                    </label>
-                    <input type="number"
-                           name="tagihan_air"
-                           class="w-full border rounded px-3 py-2"
-                           required>
-                    <small class="text-gray-500">
-                        Diisi manual oleh petugas
-                    </small>
-                </div>
-
-                <div class="flex justify-end space-x-2">
-                    <a href="{{ route('tagihan.index') }}"
-                       class="px-4 py-2 bg-gray-300 rounded">
-                        Batal
-                    </a>
-                    <button class="px-4 py-2 bg-blue-600 text-white rounded">
-                        Simpan
-                    </button>
-                </div>
-
-            </form>
-
+@section('content')
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+        <div style="margin-bottom: 24px;">
+            <h2 style="font-size: 1.25rem; font-weight: 600;">Buat Tagihan Baru</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Pilih warga dan masukkan informasi pemakaian bulan ini.</p>
         </div>
+
+        <form action="{{ route('tagihan.store') }}" method="POST">
+            @csrf
+
+            <div class="form-group">
+                <label class="form-label">Bulan Tagihan</label>
+                <input type="month" name="bulan_tagihan" class="form-control" required value="{{ old('bulan_tagihan') }}">
+                <span class="form-text">Sistem otomatis simpan sebagai tanggal 1</span>
+                @error('bulan_tagihan')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Resident</label>
+                <select name="resident_id" class="form-control" required>
+                    <option value="" disabled selected>-- Pilih Resident --</option>
+                    @foreach($residents as $resident)
+                        <option value="{{ $resident->id }}" {{ old('resident_id') == $resident->id ? 'selected' : '' }}>
+                            {{ $resident->nama }} - {{ $resident->alamat }}
+                        </option>
+                    @endforeach
+                </select>
+                @error('resident_id')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                    <label class="form-label">Meteran Awal</label>
+                    <input type="number" name="meteran_awal" class="form-control" required value="{{ old('meteran_awal') }}">
+                    @error('meteran_awal')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Meteran Akhir</label>
+                    <input type="number" name="meteran_akhir" class="form-control" required value="{{ old('meteran_akhir') }}">
+                    @error('meteran_akhir')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Tagihan Air (Rp)</label>
+                <input type="number" name="tagihan_air" class="form-control" required value="{{ old('tagihan_air') }}">
+                <span class="form-text">Diisi manual oleh petugas</span>
+                @error('tagihan_air')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 32px;">
+                <a href="{{ route('tagihan.index') }}" class="btn btn-secondary">Batal</a>
+                <button type="submit" class="btn btn-primary">Simpan Tagihan</button>
+            </div>
+        </form>
     </div>
-</x-app-layout>
+@endsection

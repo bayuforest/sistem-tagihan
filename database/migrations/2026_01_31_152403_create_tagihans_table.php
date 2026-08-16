@@ -26,6 +26,9 @@ return new class extends Migration
             $table->integer('abodement');
 
             $table->timestamps();
+            $table->softDeletes();
+            
+            $table->enum('status', ['Belum Lunas', 'Lunas'])->default('Belum Lunas');
 
             // foreign key
             $table->foreign('resident_id')

@@ -1,85 +1,77 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800">
-            Data Tagihan
-        </h2>
-    </x-slot>
+@extends('layouts.admin', ['header' => 'Data Tagihan'])
 
-    <div class="py-6">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+@section('content')
+    <div style="margin-bottom: 24px; display: flex; justify-content: flex-end; align-items: center;">
+        <a href="{{ route('tagihan.create') }}" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 18px; height: 18px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+            Buat Tagihan Baru
+        </a>
+    </div>
 
-            @if(session('success'))
-                <div class="mb-4 text-green-600">
-                    {{ session('success') }}
-                </div>
-            @endif
+    @if(session('success'))
+        <div style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; padding: 16px 20px; border-radius: var(--radius-md); margin-bottom: 24px; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px; height: 20px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            {{ session('success') }}
+        </div>
+    @endif
 
-            <a href="{{ route('tagihan.create') }}"
-               class="mb-4 inline-block px-4 py-2 bg-blue-600 text-white rounded">
-                + Tambah Tagihan
-            </a>
-
-            <div class="bg-white shadow rounded">
-                <table class="min-w-full border">
-                    <thead class="bg-gray-100">
+    <div class="table-container">
+        <div class="table-header">
+            <h2>Daftar Seluruh Tagihan</h2>
+        </div>
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bulan</th>
+                        <th>Resident</th>
+                        <th style="text-align: center;">Meteran (Awal - Akhir)</th>
+                        <th style="text-align: right;">Total</th>
+                        <th style="text-align: center;">Status</th>
+                        <th style="text-align: center;">Detail</th>
+                        <th style="width: 130px; text-align: center;">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse($tagihan as $t)
                         <tr>
-                            <th class="border px-4 py-2">Bulan</th>
-                            <th class="border px-4 py-2">Resident</th>
-                            <th class="border px-4 py-2">Meteran</th>
-                            <th class="border px-4 py-2">Air</th>
-                            <th class="border px-4 py-2">IPL</th>
-                            <th class="border px-4 py-2">Abodement</th>
-                            <th class="border px-4 py-2">Total</th>
-                            <th class="border px-4 py-2">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse($tagihan as $t)
-                            <tr>
-                                <td class="border px-4 py-2">
-                                    {{ \Carbon\Carbon::parse($t->bulan_tagihan)->format('F Y') }}
-                                </td>
-                                <td class="border px-4 py-2">
-                                    {{ $t->resident->nama }}
-                                </td>
-                                <td class="border px-4 py-2 text-center">
-                                    {{ $t->meteran_awal }} - {{ $t->meteran_akhir }}
-                                </td>
-                                <td class="border px-4 py-2 text-right">
-                                    {{ number_format($t->tagihan_air) }}
-                                </td>
-                                <td class="border px-4 py-2 text-right">
-                                    {{ number_format($t->ipl) }}
-                                </td>
-                                <td class="border px-4 py-2 text-right">
-                                    {{ number_format($t->abodement) }}
-                                </td>
-                                <td class="border px-4 py-2 text-right font-semibold">
-                                    {{ number_format($t->tagihan_air + $t->ipl + $t->abodement) }}
-                                </td>
-                                <td class="border px-4 py-2 space-x-2">
-                                    <a href="{{ route('tagihan.edit', $t) }}" class="text-blue-600">Edit</a>
+                            <td style="font-weight: 500;">{{ \Carbon\Carbon::parse($t->bulan_tagihan)->format('F Y') }}</td>
+                            <td>{{ $t->resident->nama }}</td>
+                            <td style="text-align: center; color: var(--text-muted);">{{ $t->meteran_awal }} - {{ $t->meteran_akhir }}</td>
+                            <td style="text-align: right; font-weight: 600; color: var(--primary-dark);">{{ number_format($t->tagihan_air + $t->ipl + $t->abodement, 0, ',', '.') }}</td>
+                            <td style="text-align: center;">
+                                @if($t->status === 'Lunas')
+                                    <span class="status-badge status-paid">Lunas</span>
+                                @else
+                                    <span class="status-badge status-unpaid">Belum Lunas</span>
+                                @endif
+                            </td>
+                            <td style="text-align: center;">
+                                <a href="{{ route('tagihan.show', $t) }}" style="color: var(--primary-light); text-decoration: none; font-weight: 500; font-size: 0.9rem;">Lihat Detail</a>
+                            </td>
+                            <td>
+                                <div style="display: flex; gap: 12px; align-items: center; justify-content: center;">
+                                    <a href="{{ route('tagihan.edit', $t) }}" style="color: var(--primary-color); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary-dark)'" onmouseout="this.style.color='var(--primary-color)'">Edit</a>
 
-                                    <form action="{{ route('tagihan.destroy', $t) }}"
-                                          method="POST" class="inline"
-                                          onsubmit="return confirm('Hapus tagihan?')">
+                                    <form action="{{ route('tagihan.destroy', $t) }}" method="POST" onsubmit="return confirm('Hapus tagihan ini?');" style="margin: 0;">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="text-red-600">Hapus</button>
+                                        <button type="submit" style="color: #e74c3c; background: none; border: none; font-weight: 500; font-size: 0.9rem; cursor: pointer; transition: var(--transition);" onmouseover="this.style.color='#c0392b'" onmouseout="this.style.color='#e74c3c'">Hapus</button>
                                     </form>
-                                </td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="8" class="text-center py-4">
-                                    Belum ada data tagihan
-                                </td>
-                            </tr>
-                        @endforelse
-                    </tbody>
-                </table>
-            </div>
-
+                                </div>
+                            </td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td colspan="7" style="text-align: center; color: var(--text-muted); padding: 40px;">Belum ada data tagihan yang tersimpan.</td>
+                        </tr>
+                    @endforelse
+                </tbody>
+            </table>
         </div>
     </div>
-</x-app-layout>
+@endsection

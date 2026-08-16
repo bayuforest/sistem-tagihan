@@ -61,6 +61,14 @@ class TagihanController extends Controller
 
 
     /**
+     * Display the specified resource.
+     */
+    public function show(Tagihan $tagihan)
+    {
+        return view('tagihan.show', compact('tagihan'));
+    }
+
+    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Tagihan $tagihan)
