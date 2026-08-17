@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Appland Bootstrap Template</title>
+  <title>Website Ancimas</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('images/warga/icon.png') }}" rel="icon">
+  <link href="{{ asset('images/warga/icon.png') }}" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -26,6 +26,35 @@
 
   <!-- Main CSS File -->
   <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+  <style>
+    /* Custom Navmenu Styles to match Admin Dashboard Sidebar */
+    @media (min-width: 1200px) {
+      .navmenu ul li a,
+      .navmenu ul li a:focus {
+        color: #64748b !important;
+        font-weight: 500;
+        font-size: 0.9rem !important;
+        padding: 8px 14px !important;
+        margin: 0 4px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+      
+      .navmenu ul li a:hover,
+      .navmenu ul li a:focus:hover {
+        color: var(--accent-color) !important;
+        background-color: rgba(234, 163, 21, 0.12) !important;
+      }
+      
+      .navmenu ul li a.active,
+      .navmenu ul li a.active:focus {
+        color: #ffffff !important;
+        background-color: var(--accent-color) !important;
+        box-shadow: 0 4px 10px rgba(234, 163, 21, 0.3);
+      }
+    }
+  </style>
+  @stack('styles')
 
   <!-- =======================================================
   * Template Name: Appland
@@ -64,6 +93,7 @@
 
   <!-- Main JS File -->
   <script src="{{ asset('assets/js/main.js') }}"></script>
+  @stack('scripts')
 
 </body>
 

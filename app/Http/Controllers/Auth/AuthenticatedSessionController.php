@@ -24,11 +24,21 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        $request->authenticate();
+        $user = $request->authenticate();
 
-        $request->session()->regenerate();
+        // Generate 6-digit token
+        $token = sprintf('%06d', mt_rand(100000, 999999));
+        
+        $user->two_factor_code = $token;
+        $user->two_factor_expires_at = now()->addMinutes(10);
+        $user->save();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\TwoFactorCodeMail($token));
+
+        $request->session()->put('2fa:user:id', $user->id);
+        $request->session()->put('2fa:remember', $request->boolean('remember'));
+
+        return redirect()->route('2fa.index');
     }
 
     /**

@@ -7,12 +7,13 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Dashboard</a></li>
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="#gallery">Galeri</a></li>
-          <li><a href="#tagihan">Tagihan saya</a></li>
+          <li><a href="#dashboard" class="active">Dashboard</a></li>
           <li><a href="#informasi">Informasi</a></li>
-          <li><a href="#contact">Kontak</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#tagihan">Tagihan IPL</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#pertanyaan">Pertanyaan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

@@ -2,6 +2,7 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
@@ -30,6 +31,12 @@
                 <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
                 <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
             </label>
+        </div>
+
+        <!-- Google reCAPTCHA -->
+        <div class="mt-4 flex flex-col">
+            <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}"></div>
+            <x-input-error :messages="$errors->get('g-recaptcha-response')" class="mt-2" />
         </div>
 
         <div class="flex items-center justify-end mt-4">

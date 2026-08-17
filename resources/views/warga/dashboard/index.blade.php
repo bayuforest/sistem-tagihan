@@ -6,7 +6,7 @@
 
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section pt-4 pb-5">
+    <section id="dashboard" class="hero section pt-4 pb-5">
       <div class="container">
         
         @php
@@ -26,7 +26,8 @@
             <div class="position-relative d-flex flex-column justify-content-center p-4 p-md-5 h-100" style="z-index: 2; min-height: 280px; max-width: 600px;">
                 <h1 class="display-5 fw-bold" style="color: #0F172A; text-shadow: 0 2px 10px rgba(255,255,255,0.5);">
                     Selamat Datang,<br>
-                    <span style="color: var(--accent-color);">{{ $resident->nama }} 👋</span>
+                    <span style="color: var(--accent-color);">Warga Antapani</span><br>
+                    <span style="color: #0d47a1;">City Mas 👋</span>
                 </h1>
                 <p class="fs-6 mt-3 text-secondary mb-0 fw-medium" style="text-shadow: 0 1px 2px rgba(255,255,255,0.8);">
                     Pantau tagihan dan layanan perumahan Anda dengan mudah.
@@ -74,273 +75,13 @@
       </div>
     </section><!-- /Hero Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section light-background">
+    <!-- Informasi Section -->
+    <section id="informasi" class="testimonials section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo</span></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Features</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-5">
-
-          <div class="col-xl-5 d-flex align-items-center" data-aos="fade-up" data-aos-delay="100">
-            <img src="{{ asset('images/warga/house.jpg') }}" class="img-fluid" alt="House">
-          </div>
-
-          <div class="col-xl-7 d-flex" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="row align-self-center gy-5">
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-award"></i>
-                <div>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-card-checklist"></i>
-                <div>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-dribbble"></i>
-                <div>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-filter-circle"></i>
-                <div>
-                  <h4>Beatae veritatis</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-lightning-charge"></i>
-                <div>
-                  <h4>Molestiae dolor</h4>
-                  <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-patch-check"></i>
-                <div>
-                  <h4>Explicabo consectetur</h4>
-                  <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Features Section -->
-
-    <!-- Feature Details Section -->
-    <section id="feature-details" class="feature-details section">
-
-      <div class="container">
-
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-            <img src="{{ asset('images/warga/kerja_bakti.jpg') }}" class="img-fluid" alt="Kerja Bakti">
-          </div>
-          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check"></i><span> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Ullam est qui quos consequatur eos accusamus.</span></li>
-            </ul>
-          </div>
-        </div><!-- Features Item -->
-
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ asset('images/warga/gangguan_air.jpg') }}" class="img-fluid" alt="Gangguan Air">
-          </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-            <h3>Corporis temporibus maiores provident</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div><!-- Features Item -->
-
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-            <img src="{{ asset('images/warga/satpam.jpg') }}" class="img-fluid" alt="Keamanan">
-          </div>
-          <div class="col-md-7" data-aos="fade-up">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-            <ul>
-              <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
-            </ul>
-          </div>
-        </div><!-- Features Item -->
-
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
-            <img src="{{ asset('images/warga/hero.jpg') }}" class="img-fluid" alt="Lingkungan">
-          </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div><!-- Features Item -->
-
-      </div>
-
-    </section><!-- /Feature Details Section -->
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Gallery</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "centeredSlides": true,
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 0
-                },
-                "768": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 30
-                },
-                "992": {
-                  "slidesPerView": 5,
-                  "spaceBetween": 30
-                },
-                "1200": {
-                  "slidesPerView": 7,
-                  "spaceBetween": 30
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-1.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-1.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-2.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-2.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-3.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-3.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-4.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-4.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-5.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-5.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-6.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-6.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-7.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-7.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-8.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-8.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-9.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-9.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-10.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-10.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-11.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-11.png') }}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('assets/img/app-gallery/app-gallery-12.png') }}"><img src="{{ asset('assets/img/app-gallery/app-gallery-12.png') }}" class="img-fluid" alt=""></a></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Gallery Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Informasi</h2>
+        <p>Berita dan pengumuman terbaru seputar lingkungan Antapani City Mas</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -376,92 +117,87 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <div class="testimonial-img d-flex align-items-center justify-content-center" style="background-color: var(--accent-color); height: 90px;">
+                    <i class="bi bi-calendar-event text-white" style="font-size: 40px;"></i>
                   </div>
+                  <h3>Pengumuman Rapat Warga</h3>
+                  <h4>20 Agustus 2026</h4>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                    <span>Rapat evaluasi keamanan bulanan akan diadakan di balai warga pada pukul 19.30 WIB. Kehadiran seluruh kepala keluarga sangat diharapkan.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End item -->
 
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('assets/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <div class="testimonial-img d-flex align-items-center justify-content-center" style="background-color: var(--accent-color); height: 90px;">
+                    <i class="bi bi-lightning-charge text-white" style="font-size: 40px;"></i>
                   </div>
+                  <h3>Pemadaman Listrik</h3>
+                  <h4>22 Agustus 2026</h4>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                    <span>PLN akan melakukan perbaikan gardu, diperkirakan terjadi pemadaman sementara pada pukul 09.00 - 12.00 WIB. Harap maklum.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End item -->
 
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('assets/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <div class="testimonial-img d-flex align-items-center justify-content-center" style="background-color: var(--accent-color); height: 90px;">
+                    <i class="bi bi-tools text-white" style="font-size: 40px;"></i>
                   </div>
+                  <h3>Kerja Bakti Lingkungan</h3>
+                  <h4>25 Agustus 2026</h4>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                    <span>Kegiatan kerja bakti rutin untuk membersihkan saluran air dan fasilitas umum. Mari bersama jaga kebersihan lingkungan kita.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End item -->
 
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('assets/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <div class="testimonial-img d-flex align-items-center justify-content-center" style="background-color: var(--accent-color); height: 90px;">
+                    <i class="bi bi-wallet2 text-white" style="font-size: 40px;"></i>
                   </div>
+                  <h3>Info Iuran Bulanan</h3>
+                  <h4>Akhir Bulan</h4>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                    <span>Mengingatkan kembali untuk pembayaran Iuran Pengelolaan Lingkungan (IPL) paling lambat tanggal 10 bulan depan. Terima kasih.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End item -->
 
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('assets/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <div class="testimonial-img d-flex align-items-center justify-content-center" style="background-color: var(--accent-color); height: 90px;">
+                    <i class="bi bi-telephone text-white" style="font-size: 40px;"></i>
                   </div>
+                  <h3>Kontak Darurat</h3>
+                  <h4>Keamanan & Layanan</h4>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                    <span><strong>Satpam Komplek:</strong> 0812-3456-7890<br><strong>Polisi (Bandung):</strong> 110<br><strong>Pemadam Kebakaran:</strong> 113<br><strong>Ambulans:</strong> 118</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End item -->
 
           </div>
           <div class="swiper-pagination"></div>
@@ -469,130 +205,327 @@
 
       </div>
 
-    </section><!-- /Testimonials Section -->
+    </section><!-- /Informasi Section -->
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
+    <!-- Features Section -->
+    <section id="tentang" class="features section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Tentang</h2>
+        <p>Mengenal lebih dekat tujuan dan manfaat hadirnya website Antapani City Mas</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row g-4 g-lg-0">
+        <div class="row gy-5">
 
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div><!-- End Pricing Item -->
+          <div class="col-xl-5 d-flex align-items-center" data-aos="fade-up" data-aos-delay="100">
+            <img src="{{ asset('images/warga/house.jpg') }}" class="img-fluid" alt="Antapani City Mas">
+          </div>
 
-          <div class="col-lg-4 featured" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item">
-              <h3>Business Plan</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div><!-- End Pricing Item -->
+          <div class="col-xl-7 d-flex" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            <div class="row align-self-center gy-5">
+
+              <div class="col-md-6 icon-box">
+                <i class="bi bi-people"></i>
+                <div>
+                  <h4>Dari Warga, Untuk Warga</h4>
+                  <p>Sarana informasi bersama yang praktis, mudah diakses, dan transparan.</p>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6 icon-box">
+                <i class="bi bi-info-circle"></i>
+                <div>
+                  <h4>Informasi Transparan</h4>
+                  <p>Membantu warga memperoleh informasi terkait tagihan air, keamanan, dan lingkungan tanpa penyampaian manual.</p>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6 icon-box">
+                <i class="bi bi-clipboard-data"></i>
+                <div>
+                  <h4>Pengelolaan Efisien</h4>
+                  <p>Mewujudkan pengelolaan kebutuhan lingkungan perumahan yang lebih tertib, transparan, dan efisien.</p>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6 icon-box">
+                <i class="bi bi-house-heart"></i>
+                <div>
+                  <h4>Lingkungan Nyaman</h4>
+                  <p>Semangat bersama membangun lingkungan Antapani City Mas yang nyaman, modern, dan saling mendukung.</p>
+                </div>
+              </div><!-- End Feature Item -->
+
             </div>
-          </div><!-- End Pricing Item -->
+
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Pricing Section -->
+    
 
-    <!-- Faq Section -->
-    <section id="faq" class="faq section light-background">
+    <!-- Tagihan IPL Section -->
+    <section id="tagihan" class="tagihan section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tagihan IPL</h2>
+        <p>Transparansi pengelolaan iuran lingkungan Antapani City Mas</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="table-responsive">
+          <table id="tagihanTable" class="table table-striped table-bordered w-100">
+            <thead>
+              <tr>
+                <th>Bulan</th>
+                <th>Alamat Rumah</th>
+                <th style="text-align: center;">Meteran (Awal - Akhir)</th>
+                <th style="text-align: right;">Total</th>
+                <th style="text-align: center;">Status</th>
+                <th style="text-align: center;">Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              @forelse($semuaTagihan as $t)
+                <tr>
+                  <td style="font-weight: 500;">{{ \Carbon\Carbon::parse($t->bulan_tagihan)->format('F Y') }}</td>
+                  <td>{{ $t->resident->alamat ?? '-' }}</td>
+                  <td style="text-align: center; color: var(--text-muted);">{{ $t->meteran_awal }} - {{ $t->meteran_akhir }}</td>
+                  <td style="text-align: right; font-weight: 600; color: var(--primary-dark);">Rp {{ number_format($t->tagihan_air + $t->ipl + $t->abodement, 0, ',', '.') }}</td>
+                  <td style="text-align: center;">
+                    @if($t->status === 'Paid')
+                      <span class="badge bg-success">Paid</span>
+                    @else
+                      <span class="badge bg-danger">Unpaid</span>
+                    @endif
+                  </td>
+                  <td style="text-align: center;">
+                    <button type="button" class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#detailTagihanModal{{ $t->id }}">Detail</button>
+                  </td>
+                </tr>
+
+
+              @empty
+                <tr>
+                  <td colspan="6" class="text-center">Belum ada data tagihan yang tersimpan.</td>
+                </tr>
+              @endforelse
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section><!-- /Tagihan IPL Section -->
+
+    <!-- Modals Detail Tagihan -->
+    @foreach($semuaTagihan as $t)
+      <div class="modal fade" id="detailTagihanModal{{ $t->id }}" tabindex="-1" aria-labelledby="detailTagihanModalLabel{{ $t->id }}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 420px;">
+          <div class="modal-content" style="border-radius: 12px; border: none; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+            <div class="modal-header border-0 pb-0 pt-3 px-3">
+              <div class="d-flex justify-content-between align-items-start w-100">
+                <div>
+                  <h6 class="modal-title fw-bold" style="color: #1e293b; font-size: 1.1rem;">Rincian Tagihan</h6>
+                  <small class="text-muted" style="font-size: 0.75rem;">ID Tagihan: #{{ $t->id }}</small>
+                </div>
+                @if($t->status === 'Paid')
+                  <span class="badge rounded-pill bg-success-subtle text-success px-2 py-1 border border-success-subtle" style="font-size: 0.7rem;">Paid</span>
+                @else
+                  <span class="badge rounded-pill bg-danger-subtle text-danger px-2 py-1 border border-danger-subtle" style="font-size: 0.7rem;">Unpaid</span>
+                @endif
+              </div>
+            </div>
+            
+            <div class="modal-body px-3 pt-3">
+              <!-- BULAN TAGIHAN & RESIDENT -->
+              <div class="row mb-3">
+                <div class="col-6">
+                  <div class="text-uppercase text-muted fw-semibold mb-1" style="font-size: 0.65rem; letter-spacing: 0.5px;">BULAN TAGIHAN</div>
+                  <div class="fw-bold text-dark" style="font-size: 0.85rem;">{{ \Carbon\Carbon::parse($t->bulan_tagihan)->format('F Y') }}</div>
+                </div>
+                <div class="col-6">
+                  <div class="text-uppercase text-muted fw-semibold mb-1" style="font-size: 0.65rem; letter-spacing: 0.5px;">RESIDENT</div>
+                  <div class="fw-bold text-dark" style="font-size: 0.85rem;">{{ $t->resident->alamat ?? '-' }}</div>
+                </div>
+              </div>
+
+              <hr style="border-style: dashed; color: #cbd5e1; margin-bottom: 1rem; margin-top: 0.5rem;">
+
+              <!-- DATA METERAN AIR -->
+              <div class="mb-3">
+                <div class="text-uppercase text-muted fw-semibold mb-2" style="font-size: 0.65rem; letter-spacing: 0.5px;">DATA METERAN AIR</div>
+                <div class="row">
+                  <div class="col-4">
+                    <div class="text-muted mb-1" style="font-size: 0.75rem;">Meteran Awal</div>
+                    <div class="fw-bold text-dark" style="font-size: 0.85rem;">{{ $t->meteran_awal }} m³</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="text-muted mb-1" style="font-size: 0.75rem;">Meteran Akhir</div>
+                    <div class="fw-bold text-dark" style="font-size: 0.85rem;">{{ $t->meteran_akhir }} m³</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="text-muted mb-1" style="font-size: 0.75rem;">Total Pemakaian</div>
+                    <div class="fw-bold" style="color: var(--accent-color); font-size: 0.85rem;">{{ $t->meteran_akhir - $t->meteran_awal }} m³</div>
+                  </div>
+                </div>
+              </div>
+
+              <hr style="border-style: dashed; color: #cbd5e1; margin-bottom: 1rem; margin-top: 0.5rem;">
+
+              <!-- RINCIAN BIAYA -->
+              <div class="mb-3">
+                <div class="text-uppercase text-muted fw-semibold mb-2" style="font-size: 0.65rem; letter-spacing: 0.5px;">RINCIAN BIAYA</div>
+                <div class="d-flex justify-content-between mb-1">
+                  <div class="text-dark fw-medium" style="font-size: 0.85rem;">Tagihan Air</div>
+                  <div class="text-dark fw-medium" style="font-size: 0.85rem;">Rp {{ number_format($t->tagihan_air, 0, ',', '.') }}</div>
+                </div>
+                <div class="d-flex justify-content-between mb-1">
+                  <div class="text-dark fw-medium" style="font-size: 0.85rem;">IPL (Iuran Lingkungan)</div>
+                  <div class="text-dark fw-medium" style="font-size: 0.85rem;">Rp {{ number_format($t->ipl, 0, ',', '.') }}</div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <div class="text-dark fw-medium" style="font-size: 0.85rem;">Biaya Abodement</div>
+                  <div class="text-dark fw-medium" style="font-size: 0.85rem;">Rp {{ number_format($t->abodement, 0, ',', '.') }}</div>
+                </div>
+              </div>
+              
+              <div class="d-flex justify-content-between align-items-center pt-3 pb-1 mt-3" style="border-top: 1px dashed #e2e8f0;">
+                <h6 class="fw-bold text-dark mb-0" style="font-size: 0.95rem;">Total Tagihan</h6>
+                <h6 class="fw-bold mb-0" style="color: var(--accent-color); font-size: 1.1rem;">Rp {{ number_format($t->tagihan_air + $t->ipl + $t->abodement, 0, ',', '.') }}</h6>
+              </div>
+            </div>
+            
+            <div class="modal-footer border-0 pb-3 px-3 justify-content-start mt-1">
+              <button type="button" class="btn btn-sm btn-danger text-white px-3 py-1" style="border-radius: 6px; font-weight: 500; background-color: #ef4444; border-color: #ef4444;" data-bs-dismiss="modal">Kembali</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    @endforeach
+
+    <!-- Gallery Section -->
+    <section id="galeri" class="gallery section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Galeri</h2>
+        <p>Potret lingkungan dan fasilitas yang ada di perumahan Antapani City Mas.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 3000,
+                "disableOnInteraction": false
+              },
+              "slidesPerView": "auto",
+              "centeredSlides": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 20
+                },
+                "768": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 30
+                },
+                "992": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 40
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('images/warga/galeri/agustusan.png') }}"><img src="{{ asset('images/warga/galeri/agustusan.png') }}" class="img-fluid rounded-4 shadow-sm" alt="Kegiatan Agustusan"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('images/warga/galeri/masjid.png') }}"><img src="{{ asset('images/warga/galeri/masjid.png') }}" class="img-fluid rounded-4 shadow-sm" alt="Masjid As-Salaam"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('images/warga/galeri/gerbang.png') }}"><img src="{{ asset('images/warga/galeri/gerbang.png') }}" class="img-fluid rounded-4 shadow-sm" alt="Gerbang Utama"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery-full" href="{{ asset('images/warga/galeri/rumah.png') }}"><img src="{{ asset('images/warga/galeri/rumah.png') }}" class="img-fluid rounded-4 shadow-sm" alt="Suasana Perumahan"></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+
+
+    <!-- Faq Section -->
+    <section id="pertanyaan" class="faq section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Pertanyaan & Jawaban</h2>
+        <p>Temukan jawaban atas pertanyaan-pertanyaan yang sering diajukan seputar lingkungan dan tagihan perumahan.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row justify-content-center">
+        <div class="row gy-4 align-items-center">
 
-          <div class="col-lg-8">
+          <div class="col-lg-5">
+            <img src="{{ asset('images/warga/kerja_bakti.jpg') }}" class="img-fluid" style="mix-blend-mode: multiply;" alt="Ilustrasi Kerja Bakti">
+          </div>
+
+          <div class="col-lg-7">
 
             <div class="faq-container">
 
-              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+              <div class="faq-item faq-active">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
+                <h3>Kapan tagihan IPL diterbitkan setiap bulannya?</h3>
                 <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                  <p>Tagihan Iuran Pengelolaan Lingkungan (IPL) rutin diterbitkan pada tanggal 1 setiap bulannya. Anda diharapkan melakukan pembayaran selambat-lambatnya pada tanggal 15 bulan tersebut.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="faq-item">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
+                <h3>Bagaimana cara melaporkan jika terjadi gangguan pasokan air?</h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p>Jika Anda mengalami kendala pasokan air, silakan hubungi bagian teknisi lingkungan kami melalui nomor darurat yang tertera pada menu Kontak atau sampaikan kepada Satpam yang sedang berjaga.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="faq-item">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                <h3>Apakah keamanan perumahan aktif 24 jam?</h3>
                 <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                  <p>Ya, tim keamanan (Satpam) berjaga selama 24 jam setiap hari dengan sistem pembagian shift untuk memastikan lingkungan Antapani City Mas selalu aman dan terkendali.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+              <div class="faq-item">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
+                <h3>Di mana saya bisa mendapatkan informasi mengenai jadwal kerja bakti?</h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p>Informasi jadwal kerja bakti maupun rapat rutin warga akan selalu di-update melalui bagian "Informasi" di website ini serta diumumkan secara resmi lewat grup komunikasi warga (WhatsApp).</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+              <div class="faq-item">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h3>
+                <h3>Apakah tamu yang menginap wajib lapor?</h3>
                 <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+                  <p>Sesuai dengan peraturan rukun tetangga, tamu yang menginap lebih dari 1x24 jam wajib dilaporkan kepada petugas keamanan dan/atau pengurus RT setempat dengan menyerahkan fotokopi identitas.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -608,54 +541,55 @@
     </section><!-- /Faq Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <section id="kontak" class="contact section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <div class="container section-title">
+        <h2>Kontak & Lokasi</h2>
+        <p>Hubungi petugas keamanan, instansi terkait, atau kunjungi lokasi perumahan kami.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
 
-        <div class="row gy-4">
+        <div class="row gy-4 align-items-center">
 
           <div class="col-lg-6">
 
             <div class="row gy-4">
               <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                <div class="info-item">
                   <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
+                  <h3>Alamat Perumahan</h3>
+                  <p>Komplek Antapani City Mas</p>
+                  <p>Kel. Antapani Kidul Kec. Antapani, Kota Bandung, Jawa Barat</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                <div class="info-item">
                   <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
+                  <h3>Satpam (24 Jam)</h3>
+                  <p>Pos Utama: 0812-3456-7890</p>
+                  <p>Pos Belakang: 0812-9876-5432</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="400">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
+                <div class="info-item">
+                  <i class="bi bi-building"></i>
+                  <h3>Instansi Terkait</h3>
+                  <p>Kelurahan Antapani: (022) 7201111</p>
+                  <p>Kecamatan Antapani: (022) 7202222</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="500">
-                  <i class="bi bi-clock"></i>
-                  <h3>Open Hours</h3>
-                  <p>Monday - Friday</p>
-                  <p>9:00AM - 05:00PM</p>
+                <div class="info-item">
+                  <i class="bi bi-exclamation-triangle"></i>
+                  <h3>Darurat (Bandung)</h3>
+                  <p>Polisi: 110</p>
+                  <p>Ambulans: 118</p>
+                  <p>Pemadam: 113</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -664,36 +598,10 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
+            <div class="h-100 shadow-sm rounded overflow-hidden">
+              <iframe style="border:0; width: 100%; height: 100%; min-height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.080517904018!2d107.65342261546252!3d-6.918073860010839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7d23d83b4a5%3A0xc3b44b80b5b2ef!2sAntapani%2C%20Kec.%20Antapani%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div><!-- End Contact Map -->
 
         </div>
 
@@ -701,5 +609,36 @@
 
     </section><!-- /Contact Section -->
 
+@push('styles')
+<link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+<style>
+    /* Mengurangi jarak judul section ke konten */
+    .section-title {
+        padding-bottom: 15px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    /* Penyesuaian DataTables untuk theme Bootstrap 5 */
+    #tagihanTable_wrapper .row { margin-bottom: 15px; }
+    #tagihanTable th { background-color: var(--accent-color); color: white; border-color: rgba(255,255,255,0.2); }
+    .page-item.active .page-link { background-color: var(--accent-color); border-color: var(--accent-color); }
+</style>
+@endpush
+
+@push('scripts')
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#tagihanTable').DataTable({
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/id.json'
+        },
+        order: [[0, 'desc']] // Urutkan berdasarkan bulan terbaru secara default
+    });
+});
+</script>
+@endpush
   
 @endsection

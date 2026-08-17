@@ -27,13 +27,15 @@ class WargaController extends Controller
             ->orderBy('bulan_tagihan', 'desc')
             ->get();
 
+        $semuaTagihan = Tagihan::with('resident')->orderBy('bulan_tagihan', 'desc')->get();
+
         $latestTagihan = $tagihans->first();
 
         $totalTunggakan = $tagihans->where('status', 'Unpaid')->sum(function ($tagihan) {
             return $tagihan->tagihan_air + $tagihan->ipl + $tagihan->abodement;
         });
 
-        return view('warga.dashboard.index', compact('resident', 'tagihans', 'latestTagihan', 'totalTunggakan'));
+        return view('warga.dashboard.index', compact('resident', 'tagihans', 'semuaTagihan', 'latestTagihan', 'totalTunggakan'));
     }
 
     public function cekTagihan(Request $request)
