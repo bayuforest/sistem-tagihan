@@ -26,10 +26,13 @@ class LoginRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
             'email' => ['required', 'string', 'email'],
             'password' => ['required', 'string'],
-            'g-recaptcha-response' => ['required', function ($attribute, $value, $fail) {
+        ];
+
+        if (!in_array(config('app.env'), ['local', 'staging'])) {
+            $rules['g-recaptcha-response'] = ['required', function ($attribute, $value, $fail) {
                 $response = \Illuminate\Support\Facades\Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
                     'secret' => config('services.recaptcha.secret_key'),
                     'response' => $value,
@@ -39,8 +42,10 @@ class LoginRequest extends FormRequest
                 if (!$response->json('success')) {
                     $fail('Verifikasi reCAPTCHA gagal, silakan coba lagi.');
                 }
-            }],
-        ];
+            }];
+        }
+
+        return $rules;
     }
 
     /**

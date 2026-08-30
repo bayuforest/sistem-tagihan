@@ -40,7 +40,7 @@
                     @forelse($tagihan as $t)
                         <tr>
                             <td style="font-weight: 500;">{{ \Carbon\Carbon::parse($t->bulan_tagihan)->format('F Y') }}</td>
-                            <td>{{ $t->resident->nama }}</td>
+                            <td>{{ $t->resident->alamat }}</td>
                             <td style="text-align: center; color: var(--text-muted);">{{ $t->meteran_awal }} - {{ $t->meteran_akhir }}</td>
                             <td style="text-align: right; font-weight: 600; color: var(--primary-dark);">{{ number_format($t->tagihan_air + $t->ipl + $t->abodement, 0, ',', '.') }}</td>
                             <td style="text-align: center;">

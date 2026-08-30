@@ -38,10 +38,12 @@ class TwoFactorController extends Controller
             return redirect()->route('login');
         }
 
-        if ($user->two_factor_code !== $request->two_factor_code) {
-            throw ValidationException::withMessages([
-                'two_factor_code' => 'Kode verifikasi salah.',
-            ]);
+        if(!in_array(config('app.env'), ['local','staging'])) {
+            if ($user->two_factor_code !== $request->two_factor_code) {
+                throw ValidationException::withMessages([
+                    'two_factor_code' => 'Kode verifikasi salah.',
+                ]);
+            }
         }
 
         if (now()->greaterThan($user->two_factor_expires_at)) {

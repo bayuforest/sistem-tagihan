@@ -33,7 +33,9 @@ class AuthenticatedSessionController extends Controller
         $user->two_factor_expires_at = now()->addMinutes(10);
         $user->save();
 
-        \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\TwoFactorCodeMail($token));
+        if(!in_array(config('app.env'), ['local','staging'])) {
+            \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\TwoFactorCodeMail($token));
+        }
 
         $request->session()->put('2fa:user:id', $user->id);
         $request->session()->put('2fa:remember', $request->boolean('remember'));

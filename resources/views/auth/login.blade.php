@@ -2,7 +2,9 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    @if(!in_array(config('app.env'), ['local','staging']))
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    @endif
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
@@ -34,10 +36,12 @@
         </div>
 
         <!-- Google reCAPTCHA -->
+        @if(!in_array(config('app.env'), ['local','staging']))
         <div class="mt-4 flex flex-col">
             <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}"></div>
             <x-input-error :messages="$errors->get('g-recaptcha-response')" class="mt-2" />
         </div>
+        @endif
 
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
