@@ -44,9 +44,12 @@ class TagihanController extends Controller
 
         $bulanTagihan = $validated['bulan_tagihan'] . '-01';
 
+        $resident = Resident::findOrFail($validated['resident_id']);
+
         Tagihan::create([
             'bulan_tagihan' => $bulanTagihan,
             'resident_id'   => $validated['resident_id'],
+            'nama'          => $resident->nama,
             'meteran_awal'  => $validated['meteran_awal'],
             'meteran_akhir' => $validated['meteran_akhir'],
             'tagihan_air'   => $validated['tagihan_air'],

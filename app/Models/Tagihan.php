@@ -13,6 +13,7 @@ class Tagihan extends Model
     protected $fillable = [
         'bulan_tagihan',
         'resident_id',
+        'nama',
         'meteran_awal',
         'meteran_akhir',
         'tagihan_air',
