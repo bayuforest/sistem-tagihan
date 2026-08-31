@@ -15,8 +15,8 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <div class="sidebar-logo">T</div>
-                <div class="sidebar-title">TagihanPro</div>
+                <div class="sidebar-logo">A</div>
+                <div class="sidebar-title">Ancymas</div>
             </div>
             
             <ul class="sidebar-menu">
@@ -63,6 +63,7 @@
                 </div>
                 
                 <div class="topbar-actions">
+                    <a href="{{ route('profile.edit') }}" style="text-decoration: none;">
                     <div class="user-profile">
                         <div class="user-info">
                             <span class="user-name">{{ Auth::user()->name }}</span>
@@ -72,6 +73,7 @@
                             {{ substr(Auth::user()->name, 0, 1) }}
                         </div>
                     </div>
+                    </a>
                     
                     <form method="POST" action="{{ route('logout') }}" class="logout-form">
                         @csrf

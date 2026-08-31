@@ -26,7 +26,7 @@
 
             <div>
                 <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Resident</p>
-                <p style="font-weight: 600; font-size: 1.1rem; color: var(--text-main);">{{ $tagihan->resident->nama }}</p>
+                <p style="font-weight: 600; font-size: 1.1rem; color: var(--text-main);">{{ $tagihan->nama }}</p>
                 <p style="color: var(--text-muted); font-size: 0.9rem;">{{ $tagihan->resident->alamat }}</p>
             </div>
 
