@@ -16,8 +16,8 @@
         
         <div class="card stat-card">
             <div class="stat-info">
-                <h3>Total Tagihan Air</h3>
-                <div class="stat-value">Rp {{ number_format(\App\Models\Tagihan::sum('tagihan_air') ?? 0, 0, ',', '.') }}</div>
+                <h3>Total Tagihan Unpaid</h3>
+                <div class="stat-value">Rp {{ number_format(\App\Models\Tagihan::where('status', 'Unpaid')->sum('tagihan_air') + \App\Models\Tagihan::where('status', 'Unpaid')->sum('ipl') + \App\Models\Tagihan::where('status', 'Unpaid')->sum('abodement'), 0, ',', '.') }}</div>
             </div>
             <div class="stat-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

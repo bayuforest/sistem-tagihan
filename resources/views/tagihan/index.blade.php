@@ -51,7 +51,7 @@
                                 @endif
                             </td>
                             <td style="text-align: center;">
-                                <a href="{{ route('tagihan.show', $t) }}" class="btn-action btn-info">Detail</a>
+                                <a target="_blank" href="{{ route('tagihan.show', $t) }}" class="btn-action btn-info">Detail</a>
                             </td>
                             <td>
                                 <div class="action-buttons">

@@ -12,6 +12,13 @@
         @csrf
         @method('put')
 
+        @if (session('status') === 'password-updated')
+            <div id="password-updated-alert" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;">
+                <span>{{ __('Password updated successfully.') }}</span>
+                <button type="button" onclick="document.getElementById('password-updated-alert').style.display='none'" style="background: none; border: none; font-size: 1.25rem; font-weight: bold; line-height: 1; color: #155724; cursor: pointer;">&times;</button>
+            </div>
+        @endif
+
         <div class="form-group">
             <label for="update_password_current_password" class="form-label">{{ __('Current Password') }}</label>
             <input id="update_password_current_password" name="current_password" type="password" class="form-control" autocomplete="current-password">
@@ -38,16 +45,6 @@
 
         <div style="display: flex; align-items: center; gap: 16px;">
             <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
-
-            @if (session('status') === 'password-updated')
-                <p style="font-size: 0.9rem; color: var(--text-muted);" id="password-updated-msg">{{ __('Saved.') }}</p>
-                <script>
-                    setTimeout(() => {
-                        const msg = document.getElementById('password-updated-msg');
-                        if(msg) msg.style.display = 'none';
-                    }, 2000);
-                </script>
-            @endif
         </div>
     </form>
 </section>

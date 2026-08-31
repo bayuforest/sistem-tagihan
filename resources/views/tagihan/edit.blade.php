@@ -48,6 +48,18 @@
                 @enderror
             </div>
 
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                    <label class="form-label">IPL (Rp)</label>
+                    <input type="number" name="ipl" value="{{ $tagihan->ipl }}" class="form-control" readonly style="background-color: #f1f3f5; color: #828a96;">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Biaya Abodement (Rp)</label>
+                    <input type="number" name="abodement" value="{{ $tagihan->abodement }}" class="form-control" readonly style="background-color: #f1f3f5; color: #828a96;">
+                </div>
+            </div>
+
             <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 32px;">
                 <a href="{{ route('tagihan.index') }}" class="btn btn-secondary">Batal</a>
                 <button type="submit" class="btn btn-primary">Update Tagihan</button>

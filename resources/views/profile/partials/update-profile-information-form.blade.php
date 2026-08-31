@@ -16,6 +16,13 @@
         @csrf
         @method('patch')
 
+        @if (session('status') === 'profile-updated')
+            <div id="profile-updated-alert" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;">
+                <span>{{ __('Profile updated successfully.') }}</span>
+                <button type="button" onclick="document.getElementById('profile-updated-alert').style.display='none'" style="background: none; border: none; font-size: 1.25rem; font-weight: bold; line-height: 1; color: #155724; cursor: pointer;">&times;</button>
+            </div>
+        @endif
+
         <div class="form-group">
             <label for="name" class="form-label">{{ __('Name') }}</label>
             <input id="name" name="name" type="text" class="form-control" value="{{ old('name', $user->name) }}" required autofocus autocomplete="name">
@@ -52,16 +59,6 @@
 
         <div style="display: flex; align-items: center; gap: 16px;">
             <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
-
-            @if (session('status') === 'profile-updated')
-                <p style="font-size: 0.9rem; color: var(--text-muted);" id="profile-updated-msg">{{ __('Saved.') }}</p>
-                <script>
-                    setTimeout(() => {
-                        const msg = document.getElementById('profile-updated-msg');
-                        if(msg) msg.style.display = 'none';
-                    }, 2000);
-                </script>
-            @endif
         </div>
     </form>
 </section>
