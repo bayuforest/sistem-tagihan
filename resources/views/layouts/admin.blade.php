@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Sistem Tagihan') }} - Admin</title>
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    @stack('styles')
 </head>
 <body>
     <!-- Mobile Sidebar Overlay -->
@@ -112,5 +113,6 @@
             }
         });
     </script>
+    @stack('scripts')
 </body>
 </html>
