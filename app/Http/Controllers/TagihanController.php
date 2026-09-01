@@ -46,20 +46,26 @@ class TagihanController extends Controller
 
         $resident = Resident::findOrFail($validated['resident_id']);
 
-        Tagihan::create([
-            'bulan_tagihan' => $bulanTagihan,
-            'resident_id'   => $validated['resident_id'],
-            'nama'          => $resident->nama,
-            'meteran_awal'  => $validated['meteran_awal'],
-            'meteran_akhir' => $validated['meteran_akhir'],
-            'tagihan_air'   => $validated['tagihan_air'],
-            'ipl'           => 160000,
-            'abodement'     => 10000,
-        ]);
+        try {
+            Tagihan::create([
+                'bulan_tagihan' => $bulanTagihan,
+                'resident_id'   => $validated['resident_id'],
+                'nama'          => $resident->nama,
+                'meteran_awal'  => $validated['meteran_awal'],
+                'meteran_akhir' => $validated['meteran_akhir'],
+                'tagihan_air'   => $validated['tagihan_air'],
+                'ipl'           => 160000,
+                'abodement'     => 10000,
+            ]);
 
-        return redirect()
-            ->route('tagihan.index')
-            ->with('success', 'Tagihan berhasil ditambahkan');
+            return redirect()
+                ->route('tagihan.index')
+                ->with('success', 'Tagihan berhasil ditambahkan');
+        } catch (\Illuminate\Database\QueryException $e) {
+            return back()->withInput()->with('error', 'Data tagihan untuk bulan dan warga tersebut sudah ada.');
+        } catch (\Exception $e) {
+            return back()->withInput()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
+        }
     }
 
 
