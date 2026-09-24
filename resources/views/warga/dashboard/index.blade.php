@@ -50,16 +50,16 @@
                             <h5 class="fw-bold mb-3 text-dark">Data Perumahan</h5>
                             <div class="row g-3">
                                 <div class="col-12 col-md-4 border-end">
-                                    <div class="text-muted mb-1" style="font-size: 0.75rem; font-weight: 600;">Kepala Keluarga</div>
-                                    <div class="fw-bold text-dark" style="font-size: 0.9rem;">125 KK</div>
+                                    <div class="text-muted mb-1" style="font-size: 0.75rem; font-weight: 600;">Kecamatan</div>
+                                    <div class="fw-bold text-dark" style="font-size: 0.9rem;">Antapani</div>
                                 </div>
                                 <div class="col-12 col-md-4 border-end">
-                                    <div class="text-muted mb-1" style="font-size: 0.75rem; font-weight: 600;">Satpam</div>
-                                    <div class="fw-bold text-dark" style="font-size: 0.9rem;">8 Personel</div>
+                                    <div class="text-muted mb-1" style="font-size: 0.75rem; font-weight: 600;">Kelurahan</div>
+                                    <div class="fw-bold text-dark" style="font-size: 0.9rem;">Antapani Kidul</div>
                                 </div>
                                 <div class="col-12 col-md-4">
-                                    <div class="text-muted mb-1" style="font-size: 0.75rem; font-weight: 600;">Tukang Taman</div>
-                                    <div class="fw-bold text-dark" style="font-size: 0.9rem;">5 Personel</div>
+                                    <div class="text-muted mb-1" style="font-size: 0.75rem; font-weight: 600;">RT/RW</div>
+                                    <div class="fw-bold text-dark" style="font-size: 0.9rem;">08/018</div>
                                 </div>
                             </div>
                         </div>
@@ -568,9 +568,10 @@
               <div class="col-md-6">
                 <div class="info-item">
                   <i class="bi bi-telephone"></i>
-                  <h3>Satpam (24 Jam)</h3>
-                  <p>Pos Utama: 0812-3456-7890</p>
-                  <p>Pos Belakang: 0812-9876-5432</p>
+                  <h3>Keamanan 24 Jam</h3>
+                  <p>Security: 0812-3456-7890</p>
+                  <p>Polrestabes: 110</p>
+                  <p>Tim Prabu: 0818-1861-2889</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -578,8 +579,8 @@
                 <div class="info-item">
                   <i class="bi bi-building"></i>
                   <h3>Instansi Terkait</h3>
-                  <p>Kelurahan Antapani: (022) 7201111</p>
-                  <p>Kecamatan Antapani: (022) 7202222</p>
+                  <p>Kelurahan Antapani Kidul: (022)7232993</p>
+                  <p>Kecamatan Antapani: (022)7271129</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -587,9 +588,9 @@
                 <div class="info-item">
                   <i class="bi bi-exclamation-triangle"></i>
                   <h3>Darurat (Bandung)</h3>
-                  <p>Polisi: 110</p>
-                  <p>Ambulans: 118</p>
-                  <p>Pemadam: 113</p>
+                  <p>Bandung Command Center: 112</p>
+                  <p>Diskar PB: (022)113</p>
+                  <p>Dinas Kesehatan: 119</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -599,7 +600,8 @@
 
           <div class="col-lg-6">
             <div class="h-100 shadow-sm rounded overflow-hidden">
-              <iframe style="border:0; width: 100%; height: 100%; min-height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.080517904018!2d107.65342261546252!3d-6.918073860010839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7d23d83b4a5%3A0xc3b44b80b5b2ef!2sAntapani%2C%20Kec.%20Antapani%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe style="border:0; width: 100%; height: 100%; min-height: 350px;" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d10727.883681836847!2d107.66212236560153!3d-6.930532339107743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTUnNDguMCJTIDEwN8KwMzknNTQuMiJF!5e0!3m2!1sid!2sid!4v1790229263293!5m2!1sid!2sid" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d10727.883681836847!2d107.66212236560153!3d-6.930532339107743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTUnNDguMCJTIDEwN8KwMzknNTQuMiJF!5e0!3m2!1sid!2sid!4v1790229263293!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> -->
             </div>
           </div><!-- End Contact Map -->
 
